@@ -1,0 +1,60 @@
+/* Set the body to a flex container, center its content horizontally and vertically */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Make sure the body covers the entire viewport height */
+    margin: 0;
+    background-color: #f2f2f2; /* Set a light gray background color */
+}
+
+/* Styling for the stopwatch container */
+.stopwatch {
+    text-align: center; /* Center the text inside the container */
+    background-color: #fff; /* Set the background color to white */
+    padding: 20px; /* Add padding around the content */
+    border-radius: 10px; /* Round the corners of the container */
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+/* Styling for the stopwatch display */
+#display {
+    font-size: 3em; /* Set a large font size for the display */
+    margin-bottom: 20px; /* Add margin at the bottom for spacing */
+    color: #333; /* Set the text color to dark gray */
+}
+
+/* Styling for buttons */
+button {
+    font-size: 1.5em; /* Set a moderately large font size for buttons */
+    margin: 10px; /* Add margin around the buttons */
+    padding: 10px 20px; /* Add padding inside the buttons */
+    border: none; /* Remove button borders */
+    border-radius: 5px; /* Round the corners of the buttons */
+    cursor: pointer; /* Set cursor to pointer for interactive feel */
+    transition: background-color 0.3s ease; /* Add a smooth transition effect for background color */
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #4CAF50; /* Change background color to green on hover */
+    color: white; /* Change text color to white on hover */
+}
+
+/* Styling for the list of lap times */
+ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove padding for the list */
+}
+
+/* Animation for odd lap items */
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(20px); } /* Start animation from opacity 0 and translateY 20px */
+    100% { opacity: 1; transform: translateY(0); } /* End animation with opacity 1 and no translation */
+}
+
+/* Apply fadeInOut animation to odd child elements of the list */
+li:nth-child(odd) {
+    animation: fadeInOut 0.5s ease; /* Apply fadeInOut animation with a duration of 0.5 seconds and ease timing function */
+    /* Note: Even child elements won't have this animation, making odd ones visually distinct */
+}
